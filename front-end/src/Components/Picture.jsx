@@ -4,7 +4,6 @@ import pic2 from '../Images/gallery-2.jpg'
 import pic3 from '../Images/gallery-3.jpg'
 import pic4 from '../Images/gallery-4.jpg'
 import pic5 from '../Images/gallery-5.jpg'
-import Footer from './Footer'
 
 const Picture = () => {
   return (
@@ -63,7 +62,7 @@ const Picture = () => {
 
     </div>
 
-    <Footer/>
+   
    </>
   )
 }

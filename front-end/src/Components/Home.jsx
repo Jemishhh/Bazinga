@@ -1,5 +1,6 @@
 import React from 'react'
-import Navbar from './Navbar/Navbar'
+// import Navbar from './Navbar/Navbar'
+import Services from './Navbar/Services'
 const Home = () => {
   return (
     <>
@@ -24,7 +25,10 @@ const Home = () => {
         </div>
       </section>
     </div>
+    
+    <Services/>
     </>
+
   )
 }
 

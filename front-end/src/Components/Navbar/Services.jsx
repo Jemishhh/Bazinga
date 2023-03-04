@@ -1,6 +1,6 @@
 import React from 'react'
 import Picture from '../Picture'
-import "../general.css"
+import "../Navbar/general.css"
 
 const Services = () => {
   return (<>
