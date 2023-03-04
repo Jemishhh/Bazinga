@@ -1,11 +1,9 @@
 import React from 'react'
-import './Login.css'
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Register from '../Register/Register';
 
-const Login = () => {
+const Register = () => {
   return (
     <div>
       <section className="vh-100">
@@ -36,11 +34,54 @@ const Login = () => {
           </div>
 
           {/* <!-- Email input --> */}
-          <div className="form-outline mb-4">
-            <input type="email" id="form3Example3" className="form-control form-control-lg"
-              placeholder="Enter a valid email address" />
-            <label className="form-label" for="form3Example3">Email address</label>
-          </div>
+      
+          <form class="mx-1 mx-md-4">
+
+<div class="d-flex flex-row align-items-center mb-4">
+  <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+  <div class="form-outline flex-fill mb-0">
+    <input type="text" id="form3Example1c" class="form-control" />
+    <label class="form-label" for="form3Example1c">Your Name</label>
+  </div>
+</div>
+
+<div class="d-flex flex-row align-items-center mb-4">
+  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+  <div class="form-outline flex-fill mb-0">
+    <input type="email" id="form3Example3c" class="form-control" />
+    <label class="form-label" for="form3Example3c">Your Email</label>
+  </div>
+</div>
+
+<div class="d-flex flex-row align-items-center mb-4">
+  <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+  <div class="form-outline flex-fill mb-0">
+    <input type="password" id="form3Example4c" class="form-control" />
+    <label class="form-label" for="form3Example4c">Password</label>
+  </div>
+</div>
+
+<div class="d-flex flex-row align-items-center mb-4">
+  <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+  <div class="form-outline flex-fill mb-0">
+    <input type="password" id="form3Example4cd" class="form-control" />
+    <label class="form-label" for="form3Example4cd">Repeat your password</label>
+  </div>
+</div>
+
+<div class="form-check d-flex justify-content-center mb-5">
+  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+  <label class="form-check-label" for="form2Example3">
+    I agree all statements in <a href="#!">Terms of service</a>
+  </label>
+</div>
+
+<div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+  <button type="button" class="btn btn-primary btn-lg">Register</button>
+</div>
+
+</form>
+
 
           <div className="form-outline mb-3">
             <input type="password" id="form3Example4" className="form-control form-control-lg"
@@ -63,7 +104,7 @@ const Login = () => {
             <button type="button" className="btn btn-primary btn-lg"
               style={{paddingLeft:"2.5rem",paddingRight:"2.5rem"}}>Login</button>
             <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
-                className="link-danger" onClick={Register()}>Register</a></p>
+                className="link-danger">Register</a></p>
           </div>
 
         </form>
@@ -100,4 +141,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Register
