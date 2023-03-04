@@ -3,7 +3,7 @@ const app = express()
 // const morgan = require("morgan")
 const route = require("./server/routes/routes")
 const connectDB=require("./server/db/conn")
-const bodyparser = require("body-parser");
+// const bodyparser = require("body-parser");
 
 // Log Requests
 // app.use(morgan('tiny'))

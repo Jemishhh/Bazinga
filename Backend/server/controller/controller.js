@@ -2,7 +2,7 @@ const User = require("../model/model")
 
 exports.create = (req,res)=>{
     // validate request
-    console.log(req.body)
+    console.log("req.body", req.body)
     // console.log(res)
     if(!req.body){
         res.status(400).send({message:"Content cannot be empty"})
@@ -23,7 +23,7 @@ exports.create = (req,res)=>{
     user
         .save(user)
         .then(data=>{
-            res.redirect("/add-user")
+            res.status(201).json(data);
         })
         .catch(err =>{
             res.status(500).send({
@@ -69,7 +69,7 @@ exports.update = (req,res)=>{
     }
 
     const id =req.params.id
-    User.findById(id,req.body,{useFindAndModify:false})
+    User.findByIdAndUpdate(id,req.body,{returnOriginal:false})
         .then(data=>{
             if(!data){
                 res.status(404).send({message : `Cannot Update user with ${id}, maybe user not found`})
@@ -79,7 +79,7 @@ exports.update = (req,res)=>{
             }
         })
         .catch(err=>{
-            res.status(500).send({message : "Error ini update user info"})
+            res.status(500).send({message :err.message })
         })
 }
 
@@ -96,6 +96,6 @@ exports.delete = (req,res)=>{
                 })
             }
         }).catch(err =>{
-            res.status(500).send({message: "Could not delete User with id=" + id});
+            res.status(500).send({message: err.message});
         });
 }
