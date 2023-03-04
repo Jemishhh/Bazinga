@@ -1,5 +1,5 @@
 import React from 'react'
-import web from "./Images/logo.svg";
+import web from "../Images/logo.svg";
 import Common from "./Common";
 
 const TravelHome = () => {

@@ -377,7 +377,7 @@
   \*-----------------------------------*/
   
   .hero {
-    background-image: url("../Images/hero-banner.jpg");
+    background-image: url("../Navbar/hero-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
