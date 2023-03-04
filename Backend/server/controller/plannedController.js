@@ -1,4 +1,4 @@
-const User = require("../model/model")
+const Planned = require("../model/planned")
 
 exports.create = (req,res)=>{
     // validate request
@@ -8,20 +8,16 @@ exports.create = (req,res)=>{
         res.status(400).send({message:"Content cannot be empty"})
         return
     }
-    
-    const user = new User({
-
-        username:req.body.username,
-        email:req.body.email,
-        gender:req.body.gender,
-        birth:req.body.birth,
-        hobbies:req.body.hobbies,
+    const travel = req.query.id
+    const planned = new Planned({
+        refTravel:Travel,
+        sublocation:req.body.sublocation
     })
     console.log(user.name)
 
     // save user in the database
-    user
-        .save(user)
+    
+        .save(planned)
         .then(data=>{
             res.status(201).json(data);
         })
@@ -39,7 +35,7 @@ exports.find = (req,res)=>{
     if(req.query.id){
         const id = req.query.id;
 
-        User.findById(id)
+        Planned.findById(id)
             .then(data =>{
                 if(!data){
                     res.status(404).send({ message : "Not found user with id "+ id})
@@ -52,7 +48,7 @@ exports.find = (req,res)=>{
             })
 
     }else{
-        User.find()
+        Planned.find()
             .then(user => {
                 res.send(user)
             })
@@ -69,7 +65,7 @@ exports.update = (req,res)=>{
     }
 
     const id =req.params.id
-    User.findByIdAndUpdate(id,req.body,{returnOriginal:false})
+    Planned.findByIdAndUpdate(id,req.body,{returnOriginal:false})
         .then(data=>{
             if(!data){
                 res.status(404).send({message : `Cannot Update user with ${id}, maybe user not found`})
@@ -87,7 +83,7 @@ exports.update = (req,res)=>{
 exports.delete = (req,res)=>{
     const id = req.params.id;
 
-    User.findByIdAndDelete(id).then(data => {
+    Planned.findByIdAndDelete(id).then(data => {
             if(!data){
                 res.status(404).send({ message : `Cannot Delete with id ${id}. Maybe id is wrong`})
             }else{
