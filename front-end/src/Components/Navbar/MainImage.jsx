@@ -1,65 +1,125 @@
-import React from 'react'
+import React,{ useState} from 'react'
+import TravelHome from '../TravelHome'
+import './general.css'
+
 
 const MainImage = () => {
+
+    const tempvalues = {name:"",email:"",key:2}
+
+const [values , setvalues] = useState([])
+
+const addvalues = () => {
+    const currvalues = [...values]
+    const size = currvalues.length
+    tempvalues.key = size+1
+    currvalues.push(tempvalues)
+    setvalues(currvalues)
+}
+
+const handleChange= (key,e) => {
+    console.log(e.target.value)
+    const currvalues = [...values]
+    currvalues[key-1][e.target.name] = e.target.value
+    setvalues(currvalues)
+
+    console.log(currvalues)
+}
+
+// useEffect(()=>{
+//     console.log(values)
+// },[values])
+
+
   return (
+    <>
     <div>
-     <section className="hero" id="home">
+     
+<TravelHome/>
+
+
+
+      
+         <section className="tour-search">
         <div className="container">
 
-          <h2 className="h1 hero-title">Journey to explore world</h2>
+          <form action="" className="tour-search-form">
 
-          <p className="hero-text">
-            Ac mi duis mollis. Sapiente? Scelerisque quae, penatibus? Suscipit className corporis nostra rem quos
-            voluptatibus habitant?
-            Fames, vivamus minim nemo enim, gravida lobortis quasi, eum.
-          </p>
-
-          <div className="btn-group">
-            <button className="btn btn-primary">Learn more</button>
-
-            <button className="btn btn-secondary">Book now</button>
-          </div>
-
-        </div>
-      </section>
-         <section class="tour-search">
-        <div class="container">
-
-          <form action="" class="tour-search-form">
-
-            <div class="input-wrapper">
-              <label for="destination" class="input-label">Search Destination*</label>
+            <div className="input-wrapper">
+              <label for="destination" className="input-label">Enter Destination*</label>
 
               <input type="text" name="destination" id="destination" required placeholder="Enter Destination"
-                class="input-field"/>
+                className="input-field"/>
             </div>
 
-            <div class="input-wrapper">
-              <label for="people" class="input-label">Pax Number*</label>
+            {/* <div className="input-wrapper">
+              <label for="people" className="input-label">*</label>
 
-              <input type="number" name="people" id="people" required placeholder="No.of People" class="input-field"/>
+              <input type="number" name="people" id="people" required placeholder="No.of People" className="input-field"/>
+            </div> */}
+
+            <div className="input-wrapper">
+              <label for="checkin" className="input-label">Date of Arriving*</label>
+
+              <input type="date" name="checkin" id="checkin" required className="input-field"/>
             </div>
 
-            <div class="input-wrapper">
-              <label for="checkin" class="input-label">Checkin Date**</label>
+            <div className="input-wrapper">
+              <label for="checkout" className="input-label">Date of Depature*</label>
 
-              <input type="date" name="checkin" id="checkin" required class="input-field"/>
+              <input type="date" name="checkout" id="checkout" required className="input-field"/>
             </div>
 
-            <div class="input-wrapper">
-              <label for="checkout" class="input-label">Checkout Date*</label>
+            <div className="input-wrapper">
+              <label for="destination" className="input-label">Enter Your Hobbies*</label>
 
-              <input type="date" name="checkout" id="checkout" required class="input-field"/>
+              <input type="text" name="destination" id="destination" required placeholder="Enter Your Hobbies"
+                className="input-field"/>
             </div>
 
-            <button type="submit" class="btn btn-secondary">Inquire now</button>
+            <button type="submit" className="btn btn-secondary">Inquire now</button>
 
           </form>
 
         </div>
+       
       </section>
 
+      <div className="container mt-4" style={{width:"30%" , display:"flex", justifyContent:"center" }}>
+
+
+
+{values.length===0 && <div className="btn-group">
+  <button className="btn btn-primary">Learn more</button>
+
+  <button className="btn btn-secondary" onClick={addvalues}>Book now</button>
+</div>}
+<div>
+{values.map((unit)=>{
+    return (
+        <>
+        <div className='d-inline-flex'>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Username" name="name" aria-label="Username" aria-describedby="basic-addon1" onChange={(e)=>handleChange(unit.key,e)}  value={unit.name}/>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Username" name="email" aria-label="Username" aria-describedby="basic-addon1" onChange={(e)=>handleChange(unit.key,e)}  value={unit.email}/>
+        </div>
+        </div>
+        </>
+    )
+})}
+{values.length>0 && (
+    <button type="button" class="btn btn-success" onClick={addvalues}>Success</button>
+)}
+</div>
+
+
+</div>
+
+      
     </div>
+</>
   )
 }
 

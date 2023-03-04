@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './general.css'
 import logo from "./logo.svg"
 
@@ -13,9 +14,11 @@ const Navbar = () => {
      
       <div className="header-bottom">
       <div className="container">
-      <a href="#" class="logo">
+      {/* <a href="#" class="logo"> */}
+      <Link to="/" className="logo">
           <img src={logo} alt="Tourly logo"/>
-        </a>
+          </Link>
+        {/* </a> */}
 
         <ul className="social-list">
 
