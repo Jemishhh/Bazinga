@@ -1,10 +1,10 @@
 const mongoose = require ("mongoose")
 
 const userSchema = new mongoose.Schema({
-    // username : {
-    //     type : String,
-    //     required:true
-    // },
+    username : {
+        type : String,
+        required:true
+    },
     email:{
         type:String,
         required:true,
@@ -14,10 +14,10 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    // Birth:{
-    //     type:Date,
-    //     required:true
-    // },
+    birth:{
+        type:Date,
+        required:true
+    },
     hobbies:{
         type : [String],
         required:true
@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
         data: Buffer,
         contentType: String  
     },
-    Bio:{
+    bio:{
         type:String,
     },
     refTravel:{

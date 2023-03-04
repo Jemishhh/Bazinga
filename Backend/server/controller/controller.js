@@ -2,18 +2,22 @@ const User = require("../model/model")
 
 exports.create = (req,res)=>{
     // validate request
+    console.log(req.body)
+    // console.log(res)
     if(!req.body){
         res.status(400).send({message:"Content cannot be empty"})
         return
     }
-
+    
     const user = new User({
-        name:req.body.username,
+
+        username:req.body.username,
         email:req.body.email,
         gender:req.body.gender,
-        birth:req.body.Birth,
+        birth:req.body.birth,
         hobbies:req.body.hobbies,
     })
+    console.log(user.name)
 
     // save user in the database
     user
@@ -23,7 +27,7 @@ exports.create = (req,res)=>{
         })
         .catch(err =>{
             res.status(500).send({
-                message: err||"Some error occured while creating create user"
+                message: err.message
             })
         })
 }   
@@ -48,13 +52,13 @@ exports.find = (req,res)=>{
             })
 
     }else{
-        // User.find()
-        //     .then(user => {
-        //         res.send(user)
-        //     })
-        //     .catch(err => {
-        //         res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
-        //     })
+        User.find()
+            .then(user => {
+                res.send(user)
+            })
+            .catch(err => {
+                res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
+            })
     }
 }
 

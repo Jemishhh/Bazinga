@@ -1,17 +1,19 @@
 const express = require("express")
 const app = express()
-const morgan = require("morgan")
+// const morgan = require("morgan")
 const route = require("./server/routes/routes")
 const connectDB=require("./server/db/conn")
 const bodyparser = require("body-parser");
 
 // Log Requests
-app.use(morgan('tiny'))
+// app.use(morgan('tiny'))
 // mongodb connection
+
+
+app.use(express.json())
+app.use(express.urlencoded())
+
 connectDB()
-
-app.use(bodyparser.urlencoded({ extended : true}))
-
 
 
 

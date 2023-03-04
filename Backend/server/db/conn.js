@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const CONN_URL = "mongodb+srv://user-1:qsJVseEPhxA5OUpU@cluster0.ydlfb.mongodb.net/test"
+const CONN_URL = "mongodb+srv://user-1:qsJVseEPhxA5OUpU@cluster0.ydlfb.mongodb.net/Travel"
 const connectDB = async () => {
     try{
         console.log("Hello")
