@@ -21,7 +21,8 @@ function App() {
     <Navbar />
         <Routes>
         <Route exact path="/" element={<Landing />}></Route>
-        <Route exact path="/home" element={<MainImage/>} ></Route>
+        <Route exact path="/home" element={<Home />}></Route>
+        <Route exact path="/travel" element={<MainImage/>} ></Route>
         <Route exact path="/find" element={<Landing />}></Route>
         <Route exact path="/profile" element={<Profile />}></Route>
         </Routes>
