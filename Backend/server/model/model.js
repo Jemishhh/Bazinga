@@ -90,5 +90,5 @@ const Travel = mongoose.model("Travel",travelSchema)
 const Planned = mongoose.model("Planned",plannedSchema)
 
 module.exports={
-    user,Travel,Planned
+    User,Travel,Planned
 }
