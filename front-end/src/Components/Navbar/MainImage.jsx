@@ -5,7 +5,7 @@ import './general.css'
 
 const MainImage = () => {
 
-    const tempvalues = {name:"",email:"",key:2}
+const tempvalues = {name:"",email:"",key:2}
 
 const [values , setvalues] = useState([])
 
@@ -119,6 +119,9 @@ const handleChange= (key,e) => {
 
       
     </div>
+
+
+   
 </>
   )
 }

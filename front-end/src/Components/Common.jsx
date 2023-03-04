@@ -1,6 +1,7 @@
 import React from "react";
 import web from "./Images/homepage2.png";
-import {NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
+
 
 
 const Common = (props) => {
@@ -35,6 +36,17 @@ const Common = (props) => {
           </div>
         </div>
       </section>
+
+
+
+
+   
+   
+
+ 
+     
+
+
 
     </>
   );

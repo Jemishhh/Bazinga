@@ -9,6 +9,7 @@ import Landing from  "./Components/Landing"
 import TravelHome from './Components/TravelHome';
 import Footer from  "./Components/Footer"
 import { Route, Router, Routes } from 'react-router-dom';
+import Profile from './Profile/Profile';
 
 
 // import {Route, Switch, Redirect} from "react-router-dom";
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/" element={<Landing />}></Route>
         <Route exact path="/home" element={<MainImage/>} ></Route>
         <Route exact path="/find" element={<Landing />}></Route>
+        <Route exact path="/profile" element={<Profile />}></Route>
         </Routes>
 
 

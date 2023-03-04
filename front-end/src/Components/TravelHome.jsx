@@ -14,6 +14,7 @@ const TravelHome = () => {
       />
     
     </div>
+    
     </>
   )
 }
