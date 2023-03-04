@@ -1,10 +1,10 @@
 const mongoose = require ("mongoose")
 
 const userSchema = new mongoose.Schema({
-    username : {
-        type : String,
-        required:true
-    },
+    // username : {
+    //     type : String,
+    //     required:true
+    // },
     email:{
         type:String,
         required:true,
@@ -14,10 +14,10 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    Birth:{
-        type:Date,
-        required:true
-    },
+    // Birth:{
+    //     type:Date,
+    //     required:true
+    // },
     hobbies:{
         type : [String],
         required:true
@@ -30,14 +30,14 @@ const userSchema = new mongoose.Schema({
         type:String,
     },
     refTravel:{
-        type:Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:"travelSchema"
     }
 })
 
 const travelSchema = new mongoose.Schema({
     userRef:{
-        type:Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:"userSchema"
     },
     mainLoc:{
@@ -66,7 +66,7 @@ const travelSchema = new mongoose.Schema({
         default:false
     },
     refPlanned:{
-        type:Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:"plannedSchema"
     }
 
@@ -74,7 +74,7 @@ const travelSchema = new mongoose.Schema({
 
 const plannedSchema = new mongoose.Schema({
     refTravel:{
-        type:Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:"travelSchema"
     },
     sublocation:[
@@ -89,6 +89,4 @@ const User = mongoose.model("User",userSchema)
 const Travel = mongoose.model("Travel",travelSchema)
 const Planned = mongoose.model("Planned",plannedSchema)
 
-module.exports={
-    User,Travel,Planned
-}
+module.exports=User
