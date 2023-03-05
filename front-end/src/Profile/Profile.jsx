@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import React from "react"
+// import React from "react"
 import { upload } from "./upload"
 
 
