@@ -23,8 +23,7 @@ function App() {
     <>
     {/* <Navbar /> */}
         <Routes>
-        <Route exact path="/users/:id" element={<Profdisplay />}></Route>
-        {/* <Route exact path="/" element={<Landing />}></Route> */}
+        <Route exact path="/" element={<Landing />}></Route>
         <Route exact path="/home" element={<Home />}></Route>
         <Route exact path="/travel" element={<MainImage/>} ></Route>
         <Route exact path="/find" element={<Landing />}></Route>
