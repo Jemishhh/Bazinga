@@ -1,10 +1,13 @@
 import React from 'react'
 import Home from './Home'
+import Services from './Navbar/Services'
 import Picture from './Picture'
 
 const Landing = () => {
   return (<>
   <div>
+
+
        <section className="hero" id="home">
         <div className="container">
 
@@ -26,7 +29,7 @@ const Landing = () => {
       </section>
     </div>
    <div>
-    
+   <Services/>
    <Picture/>
 
       

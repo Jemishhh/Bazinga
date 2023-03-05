@@ -12,6 +12,7 @@ import { Route, Router, Routes } from 'react-router-dom';
 import Profile from './Profile/Profile';
 import Community from './Components/Community';
 import Recommend from './Components/Recommend';
+import Request from './Components/Request';
 
 
 // import {Route, Switch, Redirect} from "react-router-dom";
@@ -25,10 +26,10 @@ function App() {
         <Route exact path="/" element={<Landing />}></Route>
         <Route exact path="/home" element={<Home />}></Route>
         <Route exact path="/travel" element={<MainImage/>} ></Route>
-        <Route exact path="/landing" element={<Landing />}></Route>
         <Route exact path="/profile" element={<Profile />}></Route>
         <Route exact path="/recommend" element={<Recommend />}></Route>
         <Route exact path="/community" element={<Community />}></Route>
+        <Route exact path="/request" element={<Request />}></Route>
         </Routes>
 
 

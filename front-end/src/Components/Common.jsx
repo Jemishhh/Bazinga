@@ -1,5 +1,5 @@
 import React from "react";
-import web from "../Images/homepage2.png";
+import web from "./backpack.svg"
 import { NavLink} from "react-router-dom";
 
 
@@ -8,13 +8,13 @@ const Common = (props) => {
   return (
     <>
       <section id="header" className="d-flex align-items-center">
-        <div className="container-fluid ">
+        <div className="container-fluid mb-4 mt-4">
           <div className="row">
             <div className="col-10 mx-auto">
             <div className="row">
               <div className="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column">
               <h1>
-                {props.name} <strong className="brand-name"> React JS </strong>
+                {props.name} <strong className="brand-name">  </strong>
               </h1>
               <h2 className="my-3">
                 The Best Frame work for making Responsive Animated Websites 
