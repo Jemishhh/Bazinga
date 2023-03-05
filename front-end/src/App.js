@@ -33,7 +33,7 @@ function App() {
         <Route exact path="/profile/:id" element={<Profile />}></Route>
         <Route exact path="/recommend" element={<Recommend />}></Route>
         <Route exact path="/community" element={<Community />}></Route>
-        <Route exact path="/request" element={<Request />}></Route>
+        <Route exact path="/request/:id" element={<Request />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route>
         </Routes>
