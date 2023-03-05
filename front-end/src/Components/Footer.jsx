@@ -1,5 +1,8 @@
 import React from 'react'
 import pic1 from "../Images/logo.svg"
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Footer = () => {
   return (
@@ -35,21 +38,20 @@ const Footer = () => {
       <ul>
 
         <li class="contact-item">
-          <ion-icon name="call-outline"></ion-icon>
+          <PhoneIcon/>
 
-          <a href="tel:+01123456790" class="contact-link">+01 (123) 4567 90</a>
+          <a href="tel:+01123456790" class="contact-link">8080702113</a>
         </li>
 
         <li class="contact-item">
-          <ion-icon name="mail-outline"></ion-icon>
+          <EmailIcon/>
 
           <a href="mailto:info.tourly.com" class="contact-link">info.tourly.com</a>
         </li>
 
         <li class="contact-item">
-          <ion-icon name="location-outline"></ion-icon>
-
-          <address>3146 Koontz, California</address>
+        <LocationOnIcon/>
+          <address>3146 Koontz, Mumbai</address>
         </li>
 
       </ul>
@@ -58,7 +60,7 @@ const Footer = () => {
 
     <div class="footer-form">
 
-      <p class="form-text">
+      <p class="form-text" style={{color:"white"}}>
         Subscribe our newsletter for more update & news !!
       </p>
 

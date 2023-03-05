@@ -10,7 +10,9 @@ import TravelHome from './Components/TravelHome';
 import Footer from  "./Components/Footer"
 import { Route, Router, Routes } from 'react-router-dom';
 import Profile from './Profile/Profile';
-import Profdisplay from './Profile/Profdisplay'
+import Community from './Components/Community';
+import Recommend from './Components/Recommend';
+import Request from './Components/Request';
 
 
 // import {Route, Switch, Redirect} from "react-router-dom";
@@ -27,6 +29,9 @@ function App() {
         <Route exact path="/travel" element={<MainImage/>} ></Route>
         <Route exact path="/find" element={<Landing />}></Route>
         <Route exact path="/profile/:id" element={<Profile />}></Route>
+        <Route exact path="/recommend" element={<Recommend />}></Route>
+        <Route exact path="/community" element={<Community />}></Route>
+        <Route exact path="/request" element={<Request />}></Route>
         </Routes>
 
 

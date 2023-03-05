@@ -33,6 +33,7 @@ route.post("/api/users",upload.single('image'),userController.create)
 route.get("/api/users",userController.find)
 route.put("/api/users/:id",userController.update)
 route.get("/api/users/:id",userController.delete)
+route.get("/api/match-users/:id",userController.match)
 
 // routes for traveller
 route.post("/api/travel",travelController.create)

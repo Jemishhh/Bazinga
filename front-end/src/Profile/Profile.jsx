@@ -1,6 +1,9 @@
 import React,{useState} from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import React from "react"
+import { upload } from "./upload"
+
 
 const Profile = () => {
 
@@ -39,6 +42,8 @@ const Prof = (user) => {
     <div className="row">
         <div className="col-md-3 border-right">
             <div className="d-flex flex-column align-items-center text-center p-3 py-5"><img className="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"/><span className="font-weight-bold">Edogaru</span><span className="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+            
+        <upload/> 
         </div>
         <div className="col-md-5 border-right">
             <div className="p-3 py-5">

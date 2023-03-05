@@ -1,61 +1,40 @@
 import React from 'react'
+import Home from './Home'
+import Services from './Navbar/Services'
+import Picture from './Picture'
 
 const Landing = () => {
-  return (
-    <div>
-    
-    <section class="gallery" id="gallery">
-        <div class="container">
+  return (<>
+  <div>
 
-          <p class="section-subtitle">Photo Gallery</p>
 
-          <h2 class="h2 section-title">Photo's From Travellers</h2>
+       <section className="hero" id="home">
+        <div className="container">
 
-          <p class="section-text">
-            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
-            Sit ornare
-            mollitia tenetur, aptent.
+          <h2 className="h1 hero-title">Journey to explore world</h2>
+
+          <p className="hero-text">
+            Ac mi duis mollis. Sapiente? Scelerisque quae, penatibus? Suscipit className corporis nostra rem quos
+            voluptatibus habitant?
+            Fames, vivamus minim nemo enim, gravida lobortis quasi, eum.
           </p>
 
-          <ul class="gallery-list">
+          <div className="btn-group">
+            <button className="btn btn-primary">Learn more</button>
 
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-1.jpg" alt="Gallery image"/>
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-2.jpg" alt="Gallery image"/>
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-3.jpg" alt="Gallery image"/>
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-4.jpg" alt="Gallery image"/>
-              </figure>
-            </li>
-
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-5.jpg" alt="Gallery image"/>
-              </figure>
-            </li>
-
-          </ul>
+            <button className="btn btn-secondary">Book now</button>
+          </div>
 
         </div>
       </section>
+    </div>
+   <div>
+   <Services/>
+   <Picture/>
 
       
     </div>
+    </>
   )
 }
 

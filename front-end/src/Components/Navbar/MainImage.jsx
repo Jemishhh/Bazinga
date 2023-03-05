@@ -77,7 +77,7 @@ const handleChange= (key,e) => {
                 className="input-field"/>
             </div>
 
-            <button type="submit" className="btn btn-secondary">Inquire now</button>
+            <button type="submit" className="btn btn-secondary">Get Details</button>
 
           </form>
 
@@ -90,27 +90,29 @@ const handleChange= (key,e) => {
 
 
 {values.length===0 && <div className="btn-group">
-  <button className="btn btn-primary">Learn more</button>
+  <button className="btn btn-primary mb-4">Unplanned</button>
 
-  <button className="btn btn-secondary" onClick={addvalues}>Book now</button>
+  <button className="btn btn-secondary mb-4" onClick={addvalues}>Planned</button>
 </div>}
 <div>
 {values.map((unit)=>{
     return (
         <>
-        <div className='d-inline-flex'>
+        
+        <div className='d-inline-flex gap-4'>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" name="name" aria-label="Username" aria-describedby="basic-addon1" onChange={(e)=>handleChange(unit.key,e)}  value={unit.name}/>
+            <input type="text" class="form-control mt-3 " placeholder="Location" name="name" aria-label="Username" aria-describedby="basic-addon1" onChange={(e)=>handleChange(unit.key,e)}  value={unit.name}/>
         </div>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" name="email" aria-label="Username" aria-describedby="basic-addon1" onChange={(e)=>handleChange(unit.key,e)}  value={unit.email}/>
+            <input type="text" class="form-control ml-3 mt-3" placeholder="Time" name="email" aria-label="Username" aria-describedby="basic-addon1" onChange={(e)=>handleChange(unit.key,e)}  value={unit.email}/>
         </div>
         </div>
         </>
     )
 })}
 {values.length>0 && (
-    <button type="button" class="btn btn-success" onClick={addvalues}>Success</button>
+  
+    <button type="button" class="btn btn-success mb-5" style={{justifyContent:"center", marginLeft:"33%"}} onClick={addvalues}>Success</button>
 )}
 </div>
 

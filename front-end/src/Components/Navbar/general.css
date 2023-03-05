@@ -121,7 +121,9 @@
     scroll-behavior: smooth;
   }
   
-  body { background: var(--white); }
+  body { background: var(--white);
+  overflow-x: hidden;
+font-family: "Poppins", sans-serif;; }
   
   
   
