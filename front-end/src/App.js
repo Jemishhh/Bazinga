@@ -25,15 +25,9 @@ function App() {
     <>
     <Navbar />
         <Routes>
-<<<<<<< HEAD
-        
-        <Route exact path="/" element={<Landing />}></Route>
-        <Route exact path="/home" element={<Home />}></Route>
-=======
         {/* <Route exact path="/users/:id" element={<Profdisplay />}></Route> */}
         {/* <Route exact path="/" element={<Landing />}></Route> */}
-        <Route exact path="/home/:id" element={<Home />}></Route>
->>>>>>> a041e1316d5bad3bf5d0d380fd401c691834fd2f
+        <Route exact path="/home" element={<Home />}></Route>
         <Route exact path="/travel" element={<MainImage/>} ></Route>
         <Route exact path="/find" element={<Landing />}></Route>
         <Route exact path="/profile" element={<Profile />}></Route>
