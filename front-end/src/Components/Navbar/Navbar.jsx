@@ -20,73 +20,48 @@ const Navbar = () => {
           </Link>
         {/* </a> */}
 
-        <ul className="social-list">
-
-          <li>
-            <a href="#" className="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" className="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" className="social-link">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
+        
 
         <nav className="navbar" data-navbar>
 
           <div className="navbar-top">
 
-            <a href="#" className="logo">
+            <a href="#" className="logo" style={{ maxWidth: "100px"}}>
               <img src=".images/logo-blue.svg" alt="Tourly logo"/>
             </a>
 
-            <button className="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
+          
 
           </div>
 
           <ul className="navbar-list">
 
-            <li>
-              <a href="#home" className="navbar-link" data-nav-link>home</a>
-            </li>
+          <Link to="/home" className="navbar-link">
+          Home
+          </Link>
+             
 
-            <li>
-              <a href="#" className="navbar-link" data-nav-link>about us</a>
-            </li>
+          <Link to="/travel" className="navbar-link">
+          Travel
+          </Link>
+          <Link to="/community" className="navbar-link">
+          Community
+          </Link>
+          <Link to="/recommend" className="navbar-link">
+          Recommendation
+          </Link>
 
-            <li>
-              <a href="#destination" className="navbar-link" data-nav-link>destination</a>
-            </li>
+          <Link to="/profile" className="navbar-link">
+          Profile
+          </Link>
 
-            <li>
-              <a href="#package" className="navbar-link" data-nav-link>packages</a>
-            </li>
-
-            <li>
-              <a href="#gallery" className="navbar-link" data-nav-link>gallery</a>
-            </li>
-
-            <li>
-              <a href="#contact" className="navbar-link" data-nav-link>contact us</a>
-            </li>
+            
 
           </ul>
 
         </nav>
 
-        <button className="btn btn-primary">Book Now</button>
+        <button className="btn btn-primary mb-3"> Friend Request</button>
 
       </div>
     </div>

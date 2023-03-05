@@ -1,5 +1,5 @@
 import React from 'react'
-import web from "../Images/logo.svg";
+import web from "./backpack.svg"
 import Common from "./Common";
 
 const TravelHome = () => {
@@ -7,7 +7,7 @@ const TravelHome = () => {
     <>
     <div>
     <Common
-      name="Grow your Business with " 
+      name="Get Set Travel " 
       imgsrc={web.src} 
       visit="/service" 
       btname="Get Started" 

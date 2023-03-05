@@ -11,9 +11,9 @@ const Picture = () => {
     <div>
       
      
-        <div className="container">
+        <div className="container mb-5 text-center mt-4">
 
-          <p className="section-subtitle">Photo Gallery</p>
+          <p className="section-subtitle pt-3">Photo Gallery</p>
 
           <h2 className="h2 section-title">Photo's From Travellers</h2>
 

@@ -122,7 +122,8 @@
   }
   
   body { background: var(--white);
-  overflow-x: hidden; }
+  overflow-x: hidden;
+font-family: "Poppins", sans-serif;; }
   
   
   
