@@ -1,7 +1,10 @@
 import React,{useState} from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+<<<<<<< HEAD
+=======
 // import React from "react"
+>>>>>>> a041e1316d5bad3bf5d0d380fd401c691834fd2f
 import { upload } from "./upload"
 
 

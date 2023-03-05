@@ -23,15 +23,22 @@ import Register from './Components/Register/Register';
 function App() {
   return (
     <>
-    {/* <Navbar /> */}
+    <Navbar />
         <Routes>
+<<<<<<< HEAD
+        
+        <Route exact path="/" element={<Landing />}></Route>
+        <Route exact path="/home" element={<Home />}></Route>
+=======
         {/* <Route exact path="/users/:id" element={<Profdisplay />}></Route> */}
         {/* <Route exact path="/" element={<Landing />}></Route> */}
         <Route exact path="/home/:id" element={<Home />}></Route>
+>>>>>>> a041e1316d5bad3bf5d0d380fd401c691834fd2f
         <Route exact path="/travel" element={<MainImage/>} ></Route>
         <Route exact path="/find" element={<Landing />}></Route>
-        <Route exact path="/profile/:id" element={<Profile />}></Route>
-        <Route exact path="/recommend" element={<Recommend />}></Route>
+        <Route exact path="/profile" element={<Profile />}></Route>
+        <Route exact path="/recommend" element={<Recommend />}></Route>.
+
         <Route exact path="/community" element={<Community />}></Route>
         <Route exact path="/request/:id" element={<Request />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
@@ -44,7 +51,7 @@ function App() {
 
 
   
-      {/* <Footer /> */}
+      <Footer />
        
     </>
     

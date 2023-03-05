@@ -112,7 +112,7 @@ const handleChange= (key,e) => {
 })}
 {values.length>0 && (
   
-    <button type="button" class="btn btn-success mb-5" style={{justifyContent:"center", marginLeft:"33%"}} onClick={addvalues}>Success</button>
+    <button type="button" class="btn btn-success mb-5" style={{justifyContent:"center", marginLeft:"25%"}} onClick={addvalues}>Success</button>
 )}
 </div>
 

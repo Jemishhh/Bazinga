@@ -54,7 +54,7 @@ const Navbar = () => {
           <Link to="/profile" className="navbar-link">
           Profile
           </Link>
-          <Link to="/profile" className="navbar-link">
+          <Link to="/request" className="navbar-link">
           Friend Request
           </Link>
             
