@@ -54,14 +54,15 @@ const Navbar = () => {
           <Link to="/profile" className="navbar-link">
           Profile
           </Link>
-
+          <Link to="/profile" className="navbar-link">
+          Friend Request
+          </Link>
             
 
           </ul>
 
         </nav>
 
-        <button className="btn btn-primary mb-3"> Friend Request</button>
 
       </div>
     </div>
