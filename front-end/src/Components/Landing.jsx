@@ -20,9 +20,9 @@ const Landing = () => {
           </p>
 
           <div className="btn-group">
-            <button className="btn btn-primary">Learn more</button>
+            <button className="btn btn-primary" >Login</button>
 
-            <button className="btn btn-secondary">Book now</button>
+            <button className="btn btn-secondary">Register</button>
           </div>
 
         </div>
