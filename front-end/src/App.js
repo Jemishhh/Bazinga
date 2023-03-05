@@ -10,6 +10,7 @@ import TravelHome from './Components/TravelHome';
 import Footer from  "./Components/Footer"
 import { Route, Router, Routes } from 'react-router-dom';
 import Profile from './Profile/Profile';
+import Profdisplay from './Profile/Profdisplay'
 
 
 // import {Route, Switch, Redirect} from "react-router-dom";
@@ -18,13 +19,14 @@ import Profile from './Profile/Profile';
 function App() {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
         <Routes>
-        <Route exact path="/" element={<Landing />}></Route>
+        <Route exact path="/users/:id" element={<Profdisplay />}></Route>
+        {/* <Route exact path="/" element={<Landing />}></Route> */}
         <Route exact path="/home" element={<Home />}></Route>
         <Route exact path="/travel" element={<MainImage/>} ></Route>
         <Route exact path="/find" element={<Landing />}></Route>
-        <Route exact path="/profile" element={<Profile />}></Route>
+        <Route exact path="/profile/:id" element={<Profile />}></Route>
         </Routes>
 
 
@@ -33,7 +35,7 @@ function App() {
 
 
   
-      <Footer />
+      {/* <Footer /> */}
        
     </>
     

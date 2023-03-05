@@ -14,6 +14,8 @@ const upload = multer({ dest: 'uploads/' });
  */
 route.get("/",services.homeRoutes)
 
+
+
 /**
  *  @description add users
  *  @method GET /add-user

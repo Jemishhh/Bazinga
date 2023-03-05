@@ -1,6 +1,38 @@
-import React from 'react'
+import React,{useState} from 'react'
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 const Profile = () => {
+
+  const [user, setUser] = useState({
+    email: "",
+    username: "",
+    gender: "",
+    bio: "",
+    dob:"",
+    hobbies:[""]
+})
+
+const handleChange = e => {
+  const { name, value } = e.target
+  setUser({
+      ...user,
+      [name]: value
+  })
+}
+
+const Prof = (user) => {
+  console.log(user)
+  const {id} = useParams()
+  console.log(id)
+  axios.put(`http://localhost:8000/api/users/${id}`, {mode:"cors"})  
+  .then(response => {
+    setUser(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  })
+}
   return (
     <>
     <div className="container rounded bg-white mt-5 mb-5">
@@ -14,18 +46,18 @@ const Profile = () => {
                     <h4 className="text-right">Profile Settings</h4>
                 </div>
                 <div className="row mt-2">
-                    <div className="col-md-12"><label className="labels">Username</label><input type="text" className="form-control" placeholder="username" value=""/></div>
+                    <div className="col-md-12"><label className="labels">Username</label><input type="text" className="form-control" placeholder="username" value={user.username}/></div>
                 </div>
                 <div className="row mt-3">
                     
-                   <div className="col-md-12"><label className="labels">Email ID</label><input type="text" className="form-control" placeholder="enter email id" value=""/></div>
-                   <div className="col-md-12"><label className="labels">Gender</label><input type="text" className="form-control" placeholder="Male" value=""/></div>
-                  <div className="col-md-12"><label className="labels">Bio</label><input type="textarea" className="form-control" placeholder="Bio" value=""/></div>
-                  <div className="col-md-12"><label className="labels">DOB</label><input type="date" className="form-control" placeholder="DOB" value=""/></div>
+                   <div className="col-md-12"><label className="labels">Email ID</label><input type="text" className="form-control" placeholder="enter email id" name="email" onChange={handleChange} value={user.email}/></div>
+                   <div className="col-md-12"><label className="labels">Gender</label><input type="text" className="form-control" placeholder="Male" onChange={handleChange} name="gender" value={user.gender}/></div>
+                  <div className="col-md-12"><label className="labels">Bio</label><input type="textarea" className="form-control" placeholder="Bio" onChange={handleChange} name="bio" value={user.bio}/></div>
+                  <div className="col-md-12"><label className="labels">DOB</label><input type="date" className="form-control" placeholder="DOB" onChange={handleChange} name="birth" value={user.birth}/></div>
                 
                 </div>
                
-                <div className="mt-5 text-center"><button className="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                <div className="mt-5 text-center"><button className="btn btn-primary profile-button" type="button" onClick={Prof(user)}>Save Profile</button></div>
             </div>
         </div>
         <div className="col-md-4">
