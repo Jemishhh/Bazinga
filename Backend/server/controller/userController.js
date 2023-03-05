@@ -21,6 +21,7 @@ exports.create = (req,res)=>{
         gender:req.body.gender,
         birth:req.body.birth,
         hobbies:req.body.hobbies,
+        bio:req.body.bio,
         image: {
             data: fs.readFileSync(req.file.path),
             contentType: req.file.mimetype

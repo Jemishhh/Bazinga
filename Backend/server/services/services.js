@@ -1,4 +1,5 @@
 const axios = require("axios")
+const User = require("../model/user")
 
 
 
@@ -20,3 +21,5 @@ exports.add_user = (req,res)=>{
 exports.update_user = (req,res)=>{
     res.send("update_user")
 }
+ 
+
