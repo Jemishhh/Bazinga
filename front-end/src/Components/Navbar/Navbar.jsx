@@ -89,6 +89,7 @@ const Navbar = () => {
         <button className="btn btn-primary">Book Now</button>
 
       </div>
+      
     </div>
 
    
