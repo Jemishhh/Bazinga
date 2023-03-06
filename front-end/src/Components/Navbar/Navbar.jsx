@@ -57,6 +57,9 @@ const Navbar = () => {
           <Link to="/request" className="navbar-link">
           Friend Request
           </Link>
+          <Link to="/login" className="navbar-link">
+          Login
+          </Link>
             
 
           </ul>

@@ -1,10 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-<<<<<<< HEAD
-// import React from "react"
-=======
->>>>>>> 3498c0097db52661178227409c512afb72911fc2
 import { upload } from "./upload"
 
 
@@ -80,13 +76,13 @@ const Prof = (user) => {
 
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li><li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li><li><a class="dropdown-item" href="#">Reading</a></li>
+    <li><a class="dropdown-item" href="#">Kayaking</a></li>
+    <li><a class="dropdown-item" href="#">Dancing</a></li>
 
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Collection</a></li>
+    <li><a class="dropdown-item" href="#">wildlife</a></li>
+    <li><a class="dropdown-item" href="#">Sports</a></li>    <li><a class="dropdown-item" href="#">Hiking</a></li>
   </ul>
 </div>  
           </div>

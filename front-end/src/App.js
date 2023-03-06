@@ -25,13 +25,8 @@ function App() {
     <>
     <Navbar />
         <Routes>
-<<<<<<< HEAD
-        {/* <Route exact path="/users/:id" element={<Profdisplay />}></Route> */}
-        {/* <Route exact path="/" element={<Landing />}></Route> */}
-=======
         
         <Route exact path="/" element={<Landing />}></Route>
->>>>>>> 3498c0097db52661178227409c512afb72911fc2
         <Route exact path="/home" element={<Home />}></Route>
         <Route exact path="/travel" element={<MainImage/>} ></Route>
         <Route exact path="/find" element={<Landing />}></Route>
@@ -39,7 +34,7 @@ function App() {
         <Route exact path="/recommend" element={<Recommend />}></Route>.
 
         <Route exact path="/community" element={<Community />}></Route>
-        <Route exact path="/request/:id" element={<Request />}></Route>
+        <Route exact path="/request" element={<Request />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route>
         </Routes>

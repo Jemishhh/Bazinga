@@ -11,7 +11,7 @@ const Recommend = () => {
 
           <p class="section-subtitle">Uncover place</p>
 
-          <h2 class="h2 section-title">Popular destination</h2>
+          <h2 class="h2 section-title text-center " style={{marginLeft:"25%"}}>Popular destination</h2>
 
           <p class="section-text">
             Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
